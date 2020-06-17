@@ -1,0 +1,17 @@
+use: rofi -dmenu
+
+# set redshift
+menu: set-redshift :: -i
+  off    => redshift -x
+  medium => redshift -P -O 5000
+  high   => redshift -P -O 4500
+
+# play and pause music
+menu: music
+  pause => playerctl pause
+  play => playerctl play
+
+# search the web (type: "g <your query>" into the prompt to search google)
+menu: search
+  g  => firefox https://google.com?q={{}}
+  yt => firefox https://youtube.com/results?search_query={{}}
