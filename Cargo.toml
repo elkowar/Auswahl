@@ -1,0 +1,15 @@
+[package]
+name = "auswahl"
+version = "0.1.0"
+authors = ["Leon K <thereal.elkowar@gmail.com>"]
+edition = "2018"
+description = "A tool to create dmenu or rofi menus using a simple declaration syntax."
+license = "Unlicense"
+keywords = ["menu", "desktop", "linux", "custom", "configuration"]
+categories = ["config", "command-line-utilities"]
+
+
+[dependencies]
+regex = "1.3"
+maplit = "1.0.2"
+structopt = "0.3"
