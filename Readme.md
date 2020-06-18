@@ -36,14 +36,18 @@ menu: search
 When specifying a menu, you can add specific command line flags by adding 
 `:: <your flags>` after the menu name. These will be added at the end of the menu command.
 
+## Installation
+
+Currently, auswahl is only available as a statically linked binary on the [releases page](https://github.com/elkowar/Auswahl/releases).  
+Just download it, make it executable (`chmod +x auswahl`), and run it!
+
 ## Dependencies
 
 Auswahl depends only on what you configure as your menu! Use what you want!
 
 ## Building
 
-To build Auswahl, you need to have the rust toolchain installed (see here: [Rustup](https://rustup.rs/))
-
+To build Auswahl, you need to have the rust toolchain installed (see here: [Rustup](https://rustup.rs/))  
 If you have that, clone this repository and run `cargo install --path .` in the project root.
 
 If you only want to compile, run `cargo build --release`. This will generate a binary in `target/release/auswahl`
