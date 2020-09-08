@@ -7,12 +7,12 @@ pub const EXAMPLE_CONFIG: &str = "
 # this should go into ~/.config/auswahl/auswahlrc
 use: rofi -dmenu
 
-set-redshift
+menu: set-redshift
   off => redshift -x
   medium => redshift -P -O 5000
   high => redshift -P -O 4500
 
-search :: -i -a
+menu: search :: -i -a
   g => firefox https://google.com?q={{}}
   yt => firefox https://youtube.com/results?search_query={{}}
 ";
@@ -110,15 +110,16 @@ mod test {
                 additional_flags: String::new(),
                 options: vec! [
                     ("off".to_string(), "redshift -x".to_string()),
-                    ("on".to_string() ,"redshift -O 4500".to_string())
+                    ("medium".to_string(), "redshift -P -O 5000".to_string()),
+                    ("high".to_string(), "redshift -P -O 4500".to_string())
                 ]
             },
             "search".to_string() => MenuConfig {
                 menu_name: "search".to_string(),
                 additional_flags: "-i -a".to_string(),
                 options: vec![
-                    ("g {}".to_string(), "firefox https://google.com?q=$1".to_string()),
-                    ("yt {}".to_string(), "firefox https://youtube.com?q=$1".to_string())
+                    ("g".to_string(), "firefox https://google.com?q={{}}".to_string()),
+                    ("yt".to_string(), "firefox https://youtube.com/results?search_query={{}}".to_string())
                 ]
             }
         };
