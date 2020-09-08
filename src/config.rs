@@ -19,14 +19,11 @@ search :: -i -a
 
 pub fn read_config_file(filepath: Option<PathBuf>) -> Result<Configuration> {
     let config_file_path = filepath.unwrap_or_else(|| {
-        PathBuf::from(
-            std::env::var("XDG_CONFIG_HOME")
-                .or(std::env::var("HOME"))
-                .unwrap_or("~/.config/".to_string())
-                + "/auswahl/auswahlrc",
-        )
+        std::env::var("XDG_CONFIG_HOME")
+            .map(PathBuf::from)
+            .unwrap_or(PathBuf::from(std::env::var("HOME").unwrap()).join(".config"))
+            .join("auswahl/auswahlrc")
     });
-
     let mut file_content = String::new();
     File::open(config_file_path)?.read_to_string(&mut file_content)?;
     parse_config(&file_content)
