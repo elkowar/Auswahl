@@ -1,6 +1,6 @@
 [package]
 name = "auswahl"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Leon K <thereal.elkowar@gmail.com>"]
 edition = "2018"
 description = "A tool to create dmenu or rofi menus using a simple declaration syntax."
