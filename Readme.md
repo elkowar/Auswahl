@@ -38,8 +38,11 @@ When specifying a menu, you can add specific command line flags by adding
 
 ## Installation
 
-Currently, auswahl is only available as a statically linked binary on the [releases page](https://github.com/elkowar/Auswahl/releases).  
+Auswahl is available as a statically linked binary on the [releases page](https://github.com/elkowar/Auswahl/releases)
 Just download it, make it executable (`chmod +x auswahl`), and run it!
+-
+Auswahl is also avaible as a [aur package](https://aur.archlinux.org/packages/auswahl-git/)  
+Install it with your favourite aur helper. And it should be in your path.
 
 ## Dependencies
 
